@@ -8,8 +8,8 @@ import { PreferencesComponent } from './user/components/preferences/preferences.
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent}
-  {path: 'profile', component: ProfileComponent}
+  {path: 'register', component: RegisterComponent},
+  {path: 'profile', component: ProfileComponent},
   {path: 'profile/preferences', component: PreferencesComponent}
 ];
 
