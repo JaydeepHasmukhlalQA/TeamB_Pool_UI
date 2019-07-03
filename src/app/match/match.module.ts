@@ -6,7 +6,14 @@ import { CreateMatchComponent } from './components/create-match/create-match.com
 
 
 @NgModule({
-  declarations: [MatchQueueComponent, CreateMatchComponent],
+  declarations: [
+    MatchQueueComponent,
+    CreateMatchComponent
+  ],
+  exports: [
+    CreateMatchComponent,
+    MatchQueueComponent
+  ],
   imports: [
     CommonModule
   ]
