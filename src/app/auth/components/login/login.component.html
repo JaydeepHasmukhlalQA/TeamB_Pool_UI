@@ -1,1 +1,10 @@
 <p>login works!</p>
+<form [formGroup]="loginForm">
+
+    <label for="usernameLable">Username:</label>
+    <input type="text" placeholder="Enter your username" formControlName="username">
+    <label for="passwordLabel">Password:</label>
+    <input type="password" placeholder="Enter your password" formControlName="password">
+</form>
+<button (click)="loginFormSubmit()">Submit</button>
+<button (click)="registerUser()">Register</button>
