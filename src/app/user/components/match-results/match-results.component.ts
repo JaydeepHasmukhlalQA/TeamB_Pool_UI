@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-match-results',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatchResultsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private user: UserService,
+  ) { }
 
   ngOnInit() {
   }
