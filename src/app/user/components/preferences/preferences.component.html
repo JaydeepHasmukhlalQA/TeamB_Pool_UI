@@ -1,1 +1,24 @@
-<p>preferences works!</p>
+<form [formGroup]="updateUserForm" (ngSubmit)="userUpdateFormSubmitted">
+    <div class="form-group">
+        <label for="firstnameUpdateLabel">First Name:</label>
+        <input type="text" class="form-control" id="firstnameUpdate" aria-describedby="firstnameUpdateHelp"
+            placeholder="CURRENT FIRSTNAME" formControlName="firstname">
+    </div>
+    <div class="form-group">
+        <label for="lastnameUpdateLabel">Last Name:</label>
+        <input type="text" class="form-control" id="surnameUpdate" aria-describedby="lastnameUpdateHelp"
+            placeholder="CURRENT LASTNAME" formControlName="lastname">
+    </div>
+    <div class="form-group">
+        <label for="passwordUpdateLabel">Last Name:</label>
+        <input type="text" class="form-control" id="passwordUpdate" aria-describedby="passwordUpdateHelp"
+            placeholder="CURRENT PASSWORD" formControlName="password">
+    </div>
+</form>
+
+<div class="pb-3">
+    <button id="updateUserButton" type="button" class="btn btn-primary" (click)="updateUserSubmit()">Update
+        Details</button>
+    <button id="deleteuserButton" type="button" class="btn btn-primary" (click)="deleteUserSubmit()">Delete
+        User</button>
+</div>
