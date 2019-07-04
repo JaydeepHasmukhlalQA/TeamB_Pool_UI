@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-statistics',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatisticsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private user: UserService,
+  ) { }
 
-  ngOnInit() {
+  ngOnInit():void {
+
   }
 
 }
