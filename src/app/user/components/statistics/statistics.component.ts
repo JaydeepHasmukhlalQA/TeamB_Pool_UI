@@ -12,7 +12,9 @@ export class StatisticsComponent implements OnInit {
     private user: UserService,
   ) { }
 
-  ngOnInit():void {
+  ngOnInit():void{
+    //code to replace id=PlayedStat, with the data from the database
+    //get from database, deconstruct and append
 
   }
 
