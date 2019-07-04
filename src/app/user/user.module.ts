@@ -6,7 +6,9 @@ import { MatchResultsComponent } from './components/match-results/match-results.
 
 
 @NgModule({
-  declarations: [PreferencesComponent, MatchResultsComponent],
+  declarations: [
+    PreferencesComponent,
+    MatchResultsComponent],
   imports: [
     CommonModule
   ]
