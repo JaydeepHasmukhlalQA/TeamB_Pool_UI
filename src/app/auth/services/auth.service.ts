@@ -1,17 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { IUser } from '../user';
+import { RequestService } from 'src/app/services/request.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+ 
 
-
-  constructor() { }
+  constructor(private req: RequestService) { }
 
   getUserData(): Observable<IUser>{
     return this.req.get<IUser>('/');
   }
+  
 
 
 }
