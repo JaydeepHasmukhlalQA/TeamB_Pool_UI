@@ -23,10 +23,12 @@ export class PreferencesComponent implements OnInit {
     password: new FormControl('')
   });
 
+  //link to post 
   updateUserSubmit() {
     console.log('Submitted', this.updateUserForm.value);
   }
 
+  //link to delete
   deleteUserSubmit() {
     console.log('Submitted', this.updateUserForm.value);
   }
