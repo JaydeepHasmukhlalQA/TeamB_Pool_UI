@@ -1,1 +1,17 @@
 <p>register works!</p>
+
+<div class="form-group">
+        <form [formGroup]="registerForm">
+            
+            <label for="usernameLable">Username:</label>
+            <input type="text" class="form-control" placeholder="Enter your username" formControlName="username">
+            <label for="passwordLabel">Password:</label>
+            <input type="password" class="form-control" placeholder="Enter your password" formControlName="password">
+            <label for="firstNameLabel">First name:</label>
+            <input type="text" class="form-control" placeholder="Enter your first name" formControlName="password">
+            <label for="lastNameLabel">Last name:</label>
+            <input type="text" class="form-control" placeholder="Enter your last name" formControlName="password">
+        </form>
+    </div> 
+        <button class="btn btn-primary" (click)="registerSubmit()">Submit</button>
+        
