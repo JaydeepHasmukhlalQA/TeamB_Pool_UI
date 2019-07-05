@@ -17,8 +17,7 @@ import { UserModule } from './user/user.module';
     HttpClientModule,
     UserModule,
     AuthModule,
-    MatchModule,
-    UserModule,
+    MatchModule
   ],
   providers: [],
   bootstrap: [AppComponent]
