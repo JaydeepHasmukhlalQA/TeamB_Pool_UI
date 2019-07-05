@@ -8,7 +8,7 @@
         <th>Date Played</th>
     </tr>
     <tbody>
-        <tr data-ng-repeat="data in testmatches.json.response.data">
+        <tr *ngFor="let data of matchesData">
             <td>{{data.player1}}</td>
             <td>{{data.player2}}</td>
             <td>{{data.winner}}</td>

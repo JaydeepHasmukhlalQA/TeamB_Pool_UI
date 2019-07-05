@@ -1,15 +1,15 @@
 export interface IUser {
-    username: string,
-    password: string,
-    firstname: string,
-    lastname: string,
-    games_played: number,
-    wins: number,
-    loss: number,
-    win_rate: number,
-    loss_rate: number,
-    _id: string,
-    _v: string    
+    username: String,
+    password: String,
+    firstname: String,
+    lastname: String,
+    games_played: Number,
+    wins: Number,
+    loss: Number,
+    win_rate: Number,
+    loss_rate: Number,
+    _id: String,
+    _v: String    
 
     //add password confirmation
 }
