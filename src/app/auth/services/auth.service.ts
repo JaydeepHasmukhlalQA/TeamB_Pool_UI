@@ -14,7 +14,7 @@ export class AuthService {
 
 
   getUserData(): Observable<IUser> {
-    return this.req.get<IUser>('/byUsername');
+    return this.req.get<IUser>('/byUsername/'+ username);
   }
 
   sendUserData(): Observable<IUser>  {
