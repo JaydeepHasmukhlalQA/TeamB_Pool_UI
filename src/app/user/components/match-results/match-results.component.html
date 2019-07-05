@@ -1,1 +1,24 @@
-<p>match-results works!</p>
+<table mat-table [dataSource]= "MatchesData">
+
+    <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let matches"> {{matches.finished_match}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="player1">
+        <th mat-header-cell *matHeaderCellDef> Player 1 </th>
+        <td mat-cell *matCellDef="let matches"> {{matches.player1}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="player2">
+        <th mat-header-cell *matHeaderCellDef> Player 2 </th>
+        <td mat-cell *matCellDef="let matches"> {{matches.player2}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let matches"> {{matches.finished_match}} </td>
+      </ng-container>
+
+
+</table>

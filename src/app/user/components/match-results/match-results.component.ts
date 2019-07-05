@@ -13,6 +13,9 @@ export class MatchResultsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    
+
   }
 
 }
