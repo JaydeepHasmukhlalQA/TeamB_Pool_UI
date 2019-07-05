@@ -11,8 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   exports: [
     LoginComponent,
-    RegisterComponent,
-    
+    RegisterComponent   
   ],
   imports: [
     CommonModule,
