@@ -13,7 +13,7 @@ export class AuthService {
 
 
 
-  getUserData(): Observable<IUser> {
+  getUserData(username): Observable<IUser> {
     return this.req.get<IUser>('/byUsername/'+ username);
   }
 
