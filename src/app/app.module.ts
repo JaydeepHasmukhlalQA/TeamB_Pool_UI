@@ -7,12 +7,16 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
+import { HeaderComponent } from './header/header.component';
 import { PlayerProfileComponent } from './services/player-profile/player-profile.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
     PlayerProfileComponent
+
   ],
   imports: [
     BrowserModule,

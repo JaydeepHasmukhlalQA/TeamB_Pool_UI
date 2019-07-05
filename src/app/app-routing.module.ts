@@ -6,14 +6,17 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './user/components/profile/profile.component';
 import { PreferencesComponent } from './user/components/preferences/preferences.component';
+import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'profile/preferences', component: PreferencesComponent},
+  {path: 'header', component: HeaderComponent},
   {path: 'match/queue', component: MatchQueueComponent},
   {path: 'match/addqeue', component: CreateMatchComponent}
+
 ];
 
 @NgModule({
