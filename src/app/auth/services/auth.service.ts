@@ -7,14 +7,22 @@ import { RequestService } from 'src/app/services/request.service';
   providedIn: 'root'
 })
 export class AuthService {
- 
+
 
   constructor(private req: RequestService) { }
 
-  getUserData(): Observable<IUser>{
-    return this.req.get<IUser>('/');
+
+
+  getUserData(): Observable<IUser> {
+    return this.req.get<IUser>('/byUsername');
   }
+
+  sendUserData(): Observable<IUser>  {
+    return this.req.set<IUser>('/createPlayer');
+  };
+
   
+
 
 
 }
