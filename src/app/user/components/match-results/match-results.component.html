@@ -1,4 +1,14 @@
-<table class="table table-striped">
+<!-- <script>
+    $(document).ready(function(){
+      $("SESSION STORAGE USERNAME").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("matchResultsTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script> -->
+<table id="matchResultsTable" class="table table-striped">
     <tr>
         <th>Player 1</th>
         <th>Player 2</th>
