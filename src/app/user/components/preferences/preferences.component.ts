@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-preferences',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreferencesComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit() {
+  constructor(
+    private user: UserService,
+  ) { }
+
+  ngOnInit(): void {
   }
 
+  updateUserForm = new FormGroup({
+    firstname: new FormControl(''),
+    lastname: new FormControl(''),
+    password: new FormControl('')
+  });
+
+  //link to post 
+  updateUserSubmit() {
+    console.log('Submitted', this.updateUserForm.value);
+  }
+
+  //link to delete
+  deleteUserSubmit() {
+    console.log('Submitted', this.updateUserForm.value);
+  }
 }
