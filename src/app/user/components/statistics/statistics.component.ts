@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
+import { IUser } from '../../interfaces/iuser';
 
 @Component({
   selector: 'app-statistics',
@@ -7,15 +8,16 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./statistics.component.scss']
 })
 export class StatisticsComponent implements OnInit {
+  
+  userData: IUser;
 
   constructor(
     private user: UserService,
   ) { }
 
-  ngOnInit():void{
-    //code to replace id=PlayedStat, with the data from the database
-    //get from database, deconstruct and append
-
+  ngOnInit(){
+    const username = 'changethis';
+    this.user.getUserData(username).subscribe(user => this.userData = user);
   }
 
 }
