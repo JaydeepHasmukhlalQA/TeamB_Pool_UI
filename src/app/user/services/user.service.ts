@@ -14,5 +14,4 @@ export class UserService {
     return this.req.get<IUser>('http://localhost:8080/player/byUsername', { username: username });
   }
 
-
 }
