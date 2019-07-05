@@ -6,6 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserModule } from './user/user.module';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -16,8 +19,11 @@ import { UserModule } from './user/user.module';
     AppRoutingModule,
     HttpClientModule,
     UserModule,
+    ReactiveFormsModule,
     AuthModule,
-    MatchModule
+    MatchModule,
+    UserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

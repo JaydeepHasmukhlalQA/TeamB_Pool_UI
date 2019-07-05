@@ -31,8 +31,8 @@ export class RequestService {
       ...httpOptions,
       params: queryParams
     });
-  
-   }
+
+ }
 
 
  delete<T>(url:string, queryParams?: HttpParams | { [param: string]: string | string[]}): Observable<T>{
@@ -48,7 +48,5 @@ export class RequestService {
     params: queryParams});
 }
 
-
-
-
 }
+
