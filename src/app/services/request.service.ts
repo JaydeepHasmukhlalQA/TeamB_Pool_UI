@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -32,7 +31,7 @@ export class RequestService {
       ...httpOptions,
       params: queryParams
     });
-  
+
  }
 
 
@@ -50,3 +49,4 @@ export class RequestService {
 }
 
 }
+

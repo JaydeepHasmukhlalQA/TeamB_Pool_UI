@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
+import { IMatch } from '../../interfaces/imatch';
 
 @Component({
   selector: 'app-match-results',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatchResultsComponent implements OnInit {
 
-  constructor() { }
+  matchesData: IMatch[];
+
+  constructor(
+    private user: UserService,
+  ) { }
+
 
   ngOnInit() {
+    this.user.getMatchesData().subscribe(matchesData => {
+      this.matchesData = matchesData;
+    });
+
+
+
   }
 
 }
