@@ -1,0 +1,21 @@
+<div class="row d-flex justify-content-center align-items-center">
+    <span class="mx-2 text-success">
+        <div class="col-3-sm mx-auto">
+            <h1 class="display-3"><strong>{{playerOneName}}</strong></h1>
+        </div>
+    </span>
+    <span class="text-warning">
+        <div class="col-2-sm mx-auto">
+            <h1 class="display-4">VS</h1>
+        </div>
+    </span>
+    <span class="mx-2 text-success">
+        <div class="col-3-sm mx-auto">
+            <h1 class="display-3"><strong>{{playerTwoName}}</strong></h1>
+        </div>
+    </span>
+    <span>
+        <button (click)="finishedMatchFromQueue()">Finished</button>
+        <button (click)="deleteMatchQueue()">Delete</button>
+    </span>
+</div>

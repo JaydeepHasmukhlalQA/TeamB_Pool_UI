@@ -1,9 +1,9 @@
+import { AppComponent } from './../app.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,10 +12,18 @@ import { RegisterComponent } from './components/register/register.component';
   ],
   exports: [
     LoginComponent,
-    RegisterComponent
+    RegisterComponent   
   ],
   imports: [
     CommonModule
+  ],
+  providers: [
+    
+  ],
+  bootstrap: [
+    AppComponent
+    CommonModule,
+    ReactiveFormsModule
   ]
 })
 export class AuthModule { }

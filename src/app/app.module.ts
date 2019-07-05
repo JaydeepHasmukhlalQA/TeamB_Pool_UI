@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { MatchModule } from './match/match.module';
 import { AuthModule } from './auth/auth.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -7,12 +8,16 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserModule } from './user/user.module';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { HeaderComponent } from './header/header.component';
+import { PlayerProfileComponent } from './services/player-profile/player-profile.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    PlayerProfileComponent
+
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AuthModule,
     MatchModule,
     UserModule,
-    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

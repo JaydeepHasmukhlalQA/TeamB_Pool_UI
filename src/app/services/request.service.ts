@@ -11,8 +11,9 @@ const httpOptions = {
 })
 export class RequestService {
 
-  constructor(private http: HttpClient
-    ) { }
+
+  constructor(private http: HttpClient) { }
+
 
   get<T>(
     url: string,
@@ -21,12 +22,11 @@ export class RequestService {
     return this.http.get<T>(url, {
       ...httpOptions,
       params: queryParams
-    })
+    });
   }
 
-  //POST request
+  post<T>(url: string, body: any, queryParams?: HttpParams | { [param: string]: string | string[] }): Observable<T> {
 
-  post<T>(url:string, body:any, queryParams?: HttpParams | { [param: string]: string | string[] }): Observable<T> {
     return this.http.post<T>(url, body, {
       ...httpOptions,
       params: queryParams
