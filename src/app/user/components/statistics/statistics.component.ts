@@ -8,16 +8,18 @@ import { IUser } from '../../interfaces/iuser';
   styleUrls: ['./statistics.component.scss']
 })
 export class StatisticsComponent implements OnInit {
-  
+
   userData: IUser;
 
   constructor(
     private user: UserService,
   ) { }
 
-  ngOnInit(){
-    const username = 'changethis';
-    this.user.getUserData(username).subscribe(user => this.userData = user);
+  ngOnInit() {
+    const username = 'JohnKM';
+    this.user.getUserData(username).subscribe(user => {
+      this.userData = user;
+    })
   }
 
 }

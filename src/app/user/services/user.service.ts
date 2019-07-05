@@ -10,9 +10,9 @@ export class UserService {
 
   constructor(private req: RequestService) { }
 
-  getUserData(username:any): Observable<IUser> {
-    return this.req.get<IUser>('/byUsername/' + username);
-}
+  getUserData(username: any): Observable<IUser> {
+    return this.req.get<IUser>('http://localhost:8080/player/byUsername', { username: username });
+  }
 
- 
+
 }
