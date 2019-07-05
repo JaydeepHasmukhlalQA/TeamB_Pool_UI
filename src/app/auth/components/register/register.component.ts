@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private auth: authService) { }
 
   ngOnInit() {
   }
@@ -24,10 +24,9 @@ export class RegisterComponent implements OnInit {
   });
 
   registerSubmit() {
-    console.log("form submitted");
-    console.log(this.registerForm.value);
+    let vals = this.registerForm.value;
+    this.auth.setUserData(vals);
     this.router.navigate(['/login']);
-  
   }
 
 
