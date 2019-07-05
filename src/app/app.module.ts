@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { MatchModule } from './match/match.module';
 import { AuthModule } from './auth/auth.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,6 +17,7 @@ import { PlayerProfileComponent } from './services/player-profile/player-profile
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     AuthModule,
     MatchModule,
     UserModule,
