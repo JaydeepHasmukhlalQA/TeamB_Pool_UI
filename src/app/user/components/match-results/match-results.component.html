@@ -1,1 +1,32 @@
-<p>match-results works!</p>
+<!-- <script>
+    $(document).ready(function(){
+      $("SESSION STORAGE USERNAME").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("matchResultsTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script> -->
+<table id="matchResultsTable" class="table table-striped">
+    <tr>
+        <th>Player 1</th>
+        <th>Player 2</th>
+        <th>Winner</th>
+        <th>Seven Balled</th>
+        <th>Date Created</th>
+        <th>Date Played</th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let data of matchesData">
+            <td>{{data.player1}}</td>
+            <td>{{data.player2}}</td>
+            <td>{{data.winner}}</td>
+            <td>{{data.seven_balled}}</td>
+            <td>{{data.created_match}}</td>
+            <td>{{data.finished_match}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
