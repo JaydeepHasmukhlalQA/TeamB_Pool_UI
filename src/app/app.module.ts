@@ -19,6 +19,7 @@ import { PlayerProfileComponent } from './services/player-profile/player-profile
     AuthModule,
     MatchModule,
     UserModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
