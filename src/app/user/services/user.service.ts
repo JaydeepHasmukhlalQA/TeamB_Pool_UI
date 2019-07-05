@@ -8,10 +8,10 @@ import { IUser } from '../interfaces/iuser';
 })
 export class UserService {
 
-
   constructor(private req: RequestService) { }
 
-  getUserData(): Observable<IUser> {
-    return this.req.get<IUser>('/assets/test-user.json');
-}
+  getUserData(username: any): Observable<IUser> {
+    return this.req.get<IUser>('http://localhost:8080/player/byUsername', { username: username });
+  }
+
 }
