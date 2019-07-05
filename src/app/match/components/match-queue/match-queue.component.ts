@@ -1,3 +1,5 @@
+import { MatchService } from './../../services/match.service';
+import { Iqueue } from './../../interfaces/iqueue';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatchQueueComponent implements OnInit {
 
-  constructor() { }
+  queueData: Iqueue[];
+
+  constructor(private matchQueue: MatchService) { }
 
   ngOnInit() {
+    this.refreshMatchQueueData();
   }
 
+  refreshMatchQueueData() {
+    this.getMatchQueueData();
+  }
+
+  getMatchQueueData() {
+    this.matchQueue.getMatchQueueData().subscribe(queueData => {
+      this.queueData = queueData;
+    });
+  }
 }
