@@ -13,8 +13,7 @@ const httpOptions = {
 })
 export class RequestService {
 
-  constructor(private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) { }
 
   get<T>(
     url: string,
@@ -27,11 +26,11 @@ export class RequestService {
   }
 
   post<T>(url: string, body: any, queryParams?: HttpParams | { [param: string]: string | string[] }): Observable<T> {
+
     return this.http.post<T>(url, body, {
       ...httpOptions,
       params: queryParams
     });
-
   }
 
   delete<T>(url: string, queryParams?: HttpParams | { [param: string]: string | string[] }): Observable<T> {
