@@ -1,1 +1,13 @@
 <p>login works!</p>
+
+<div class="form-group">
+    <form [formGroup]="loginForm">
+        
+        <label for="usernameLable">Username:</label>
+        <input type="text" class="form-control" placeholder="Enter your username" formControlName="username">
+        <label for="passwordLabel">Password:</label>
+        <input type="password" class="form-control" placeholder="Enter your password" formControlName="password">
+    </form>
+</div> 
+    <button class="btn btn-primary" (click)="loginFormSubmit()">Submit</button>
+    <button  class="btn btn-primary" (click)="registerUser()">Register</button>
