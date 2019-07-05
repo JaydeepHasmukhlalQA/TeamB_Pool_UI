@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private auth: AuthService) { }
 
   ngOnInit() {
   }
@@ -21,8 +21,11 @@ export class LoginComponent implements OnInit {
 
 
   loginFormSubmit() {
-    console.log("form submitted");
-    console.log(this.loginForm.value);
+    let vals = this.loginForm.value;
+    let player = this.auth.getUserData(vals.username);
+    if (vals.password == player.password) {
+      this.router.navigate(['/playerProfile']);
+    }
   }
 
   registerUser() {
